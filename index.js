@@ -1,16 +1,18 @@
+require('dotenv').config()
+// import 'dotenv/config'
 const TelegramBot = require('node-telegram-bot-api');
 // const fetch = require('node-fetch');
 const axios = require('axios');
 // replace the value below with the Telegram token you receive from @BotFather
 // const token = process.env.TYNI_TG_BOT_API;
-const token = '6120685926:AAEHY9vjBacgXR5vFvGmYbsJjSYX-F0IFNQ';
-const clonedVoiceApiKey='7672d47d57a53e82857f494f14709f28';
+const token = process.env.TYNI_TG_BOT_API;
+const clonedVoiceApiKey= process.env.ALIKA_CLONED_VOICE_API;
 // Create a bot that uses 'polling' to fetch new updates
 const bot = new TelegramBot(token, {polling: true});
 
 async function fetchTextToSpeech(msgg) {
-    const voiceId = 'UgxR9vSyzjCIXG8WIu7a';
-    const xiApiKey = '7672d47d57a53e82857f494f14709f28';
+    const voiceId = process.env.ALIKA_CLONED_VOICE_ID;
+    const xiApiKey = process.env.ALIKA_CLONED_VOICE_API;
   
     try {
 
