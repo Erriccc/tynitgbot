@@ -85,7 +85,7 @@ bot.on('message', async (msg) => {
 
     // send a message to the chat acknowledging receipt of their message
     bot.sendAudio(chatId, audioFile);
-    bot.sendMessage(chatId, "audioFile sent");
+    bot.sendMessage(chatId, "-tynibot");
     
   });
   
